@@ -19,7 +19,7 @@ for i in range(4):
     matr[0][0] = ' '
 
 # 2 stage
-print('Задаем координату через пробел')
+print('Задание координат через пробел')
 num = 9
 while num > 0:
     temp1, temp2 = [], []
