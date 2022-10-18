@@ -28,8 +28,25 @@ while num > 0:
     else:
         s0 = '0'
     a0 = input(f'Ход {s0}:').split()
+
+#################### checking
+    if len(a0) != 2:
+            print('Please, type TWO coord.!')
+            continue
+    if not(a0[0].isdigit() and a0[1].isdigit()):
+            print('Type digits please!')
+            continue
+    if not(int(a0[0])>=1 and int(a0[0])<4 and int(a0[1])>=1 and int(a0[1])<4):
+            print('Out of range!')
+            continue
+    if matr[int(a0[0])][int(a0[1])] != '-':
+            print('Place is busy, type another one!')
+            continue
+##################### checking
+
     matr_i = int(a0[0])
     matr_j = int(a0[1])
+
     for i in range(1, 4):
         for j in range(1, 4):
             matr[matr_i][matr_j] = s0
